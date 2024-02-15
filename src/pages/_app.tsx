@@ -1,8 +1,15 @@
 import "@/styles/tailwind.css"
 import type { AppProps } from "next/app"
+
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-        <Component {...pageProps} />
+    <Component {...pageProps}>
+      <Analytics />
+      <SpeedInsights />
+    </Component>
   )
 }
 export default MyApp
