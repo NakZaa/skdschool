@@ -6,6 +6,8 @@ import NextDocument, {
   NextScript,
 } from "next/document"
 
+import { Analytics } from "@vercel/analytics/react"
+
 export default class Document extends NextDocument {
   static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await NextDocument.getInitialProps(ctx)
@@ -39,6 +41,7 @@ export default class Document extends NextDocument {
         <body>
           <Main />
           <NextScript />
+          <Analytics />
         </body>
       </Html>
     )
