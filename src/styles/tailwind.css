@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .landing-btn {
+    @apply mt-4 rounded-md px-8 py-3 shadow-md transition-colors;
+
+    &.--primary {
+      @apply bg-skd-primary-600 text-white hover:bg-skd-primary-300;
+    }
+
+    &.--normal {
+      @apply bg-white text-skd-gray-500 hover:bg-slate-100;
+    }
+  }
+}
+
+@layer utilities {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+}

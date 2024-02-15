@@ -1,20 +1,33 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
+
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 const config: Config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        skd: {
+          primary: {
+            600: "#008e0c",
+            300: "#1db42f",
+          },
+          gray: {
+            100: "#F8FAFC",
+            500: "#64748B",
+          },
+        },
+      },
+      fontFamily: {
+        display: ["IBM Plex Sans Thai", ...defaultTheme.fontFamily.sans],
+      },
+      screens: {
+        sm: "768px",
+        md: "992px",
+        lg: "1200px",
       },
     },
   },
   plugins: [],
-};
-export default config;
+}
+export default config
