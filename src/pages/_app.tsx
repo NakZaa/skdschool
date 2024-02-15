@@ -6,10 +6,11 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Component {...pageProps}>
+    <>
+      <Component {...pageProps} />
       <Analytics />
       <SpeedInsights />
-    </Component>
+    </>
   )
 }
 export default MyApp
