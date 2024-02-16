@@ -6,7 +6,7 @@ import NextDocument, {
   NextScript,
 } from "next/document"
 
-import { GoogleTagManager } from "@next/third-parties/google"
+import { GoogleAnalytics } from "@next/third-parties/google"
 
 export default class Document extends NextDocument {
   static async getInitialProps(ctx: DocumentContext) {
@@ -18,12 +18,12 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
+          <GoogleAnalytics gaId="G-N5E4J3G6CQ" />
           <meta charSet="utf-8" />
         </Head>
         <body>
           <Main />
           <NextScript />
-          <GoogleTagManager gtmId="GTM-KVCFT6GF" />
         </body>
       </Html>
     )
