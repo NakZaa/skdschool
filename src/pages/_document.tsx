@@ -1,5 +1,3 @@
-import { Metadata } from "next"
-
 import NextDocument, {
   DocumentContext,
   Head,
@@ -7,6 +5,8 @@ import NextDocument, {
   Main,
   NextScript,
 } from "next/document"
+
+import { GoogleTagManager } from "@next/third-parties/google"
 
 export default class Document extends NextDocument {
   static async getInitialProps(ctx: DocumentContext) {
@@ -23,6 +23,7 @@ export default class Document extends NextDocument {
         <body>
           <Main />
           <NextScript />
+          <GoogleTagManager gtmId="GTM-KVCFT6GF" />
         </body>
       </Html>
     )
