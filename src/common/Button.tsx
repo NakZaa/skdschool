@@ -1,9 +1,14 @@
+"use client"
+
 import Link from "next/link"
 
 export function JoinButton() {
   return (
     <>
-      <Link href="/contact" className="landing-btn --primary font-display font-medium">
+      <Link
+        href="/contact"
+        className="landing-btn --primary font-display font-medium"
+      >
         JOIN US
       </Link>
     </>

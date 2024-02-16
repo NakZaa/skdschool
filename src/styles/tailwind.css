@@ -13,11 +13,6 @@
     &.--normal {
       @apply bg-white text-skd-gray-500 hover:bg-slate-100;
     }
-  }
-}
-
-@layer utilities {
-  @variants responsive {
     /* Hide scrollbar for Chrome, Safari and Opera */
     .no-scrollbar::-webkit-scrollbar {
       display: none;

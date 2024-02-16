@@ -12,8 +12,8 @@ export default function Contact() {
   return (
     <PageContainer
       title="Siam Kid D School"
-      imgURL="/src/images/Default.png"
-      description="Siam Kid D School Contacts"
+      imgURL="/og.png"
+      description="Siam Kid D School. For more information please call 044 602 070."
     >
       <main className="flex min-h-screen flex-col items-center justify-start pt-24 sm:pt-12">
         <section className="mb-4 px-10 text-center">

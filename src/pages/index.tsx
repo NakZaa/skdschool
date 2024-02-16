@@ -21,8 +21,8 @@ const IndexPage = () => {
   return (
     <PageContainer
       title="Siam Kid D School"
-      imgURL="/src/images/Default.png"
-      description="Welcome to Siam Kid D School!"
+      imgURL="/og.png"
+      description="Siam Kid D School. For more information please call 044 602 070."
     >
       <main>
         <div className="flex min-h-screen flex-col items-center justify-start pt-24 sm:pt-12">
@@ -108,7 +108,7 @@ const IndexPage = () => {
               />
               <FeatureCard
                 title="Our Curriculum"
-                description={`We follow the UK based Early Years Foundation Stage (EYFS) curriculum. This is used in all early years schools in the UK and provides the framework for learning, development.`}
+                description={`We follow the UK based Early Years Foundation Stage (EYFS) curriculum. This is used in all early years schools in the UK and provides the framework for learning and development.`}
                 icon={Bee}
                 width={80}
                 height={80}
@@ -176,7 +176,7 @@ const IndexPage = () => {
               />
               <TestimonyCard
                 title="ปิยะดา ธณเตชทัต"
-                description="เปิดโอกาศให้เด็กได้เตรียมความพร้อมตามวัยอย่างมีความสุข"
+                description="เปิดโอกาสให้เด็กได้เตรียมความพร้อมตามวัยอย่างมีความสุข"
                 role="Parent"
               />
             </div>
