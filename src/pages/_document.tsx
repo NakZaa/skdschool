@@ -18,7 +18,20 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
-          <GoogleAnalytics gaId="G-N5E4J3G6CQ" />
+          {/* eslint-disable-next-line @next/next/next-script-for-ga */}
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-N5E4J3G6CQ"
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: ` window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-N5E4J3G6CQ');`,
+            }}
+          ></script>
           <meta charSet="utf-8" />
         </Head>
         <body>
