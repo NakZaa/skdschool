@@ -21,15 +21,15 @@ export default class Document extends NextDocument {
           {/* eslint-disable-next-line @next/next/next-script-for-ga */}
           <script
             async
-            src="https://www.googletagmanager.com/gtag/js?id=G-N5E4J3G6CQ"
+            src="https://www.googletagmanager.com/gtag/js?id=G-4GYXYPW8Y4"
           ></script>
           <script
             dangerouslySetInnerHTML={{
-              __html: ` window.dataLayer = window.dataLayer || [];
+              __html: `window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-
-              gtag('config', 'G-N5E4J3G6CQ');`,
+            
+              gtag('config', 'G-4GYXYPW8Y4');`,
             }}
           ></script>
           <meta charSet="utf-8" />
