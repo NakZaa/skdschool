@@ -196,7 +196,7 @@ const IndexPage = () => {
                 Interested?
               </span>
             </p>
-            <div className="mt-12">
+            <div className="mt-4 flex items-center justify-center">
               <JoinButton />
             </div>
           </section>
