@@ -56,7 +56,7 @@ const Path = (
 export const MenuToggle = ({ toggle }: { toggle: () => any }) => (
   <button
     onClick={toggle}
-    className="absolute -left-5 -top-3 flex h-[50px] w-[50px] cursor-pointer rounded-lg border-0 bg-transparent outline-0"
+    className="absolute -left-5 -top-2.5 flex h-[50px] w-[50px] cursor-pointer rounded-lg border-0 bg-transparent outline-0"
   >
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path

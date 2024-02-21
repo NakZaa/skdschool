@@ -23,6 +23,7 @@ const navigation = [
 
 const sidebar = {
   open: (height = 1000) => ({
+    display: "block",
     clipPath: `circle(2200px at 40px 40px)`,
     transition: {
       type: "spring",
@@ -31,6 +32,7 @@ const sidebar = {
     },
   }),
   closed: {
+    display: "none",
     clipPath: "circle(30px at 0px 0px)",
     transition: {
       delay: 0.5,
@@ -68,7 +70,10 @@ export default function Nav() {
           >
             <div className="flex flex-1 items-center justify-between">
               <div className="flex w-full items-center justify-between md:w-auto">
-                <Link href="/" className="relative z-50 block py-2 sm:hidden">
+                <Link
+                  href="/"
+                  className="relative z-50 -ml-3 block pb-2 pt-1.5 sm:hidden"
+                >
                   <Image src={Logo} width={45} height={45} alt="SKD" />
                 </Link>
                 <Link
@@ -197,10 +202,13 @@ export default function Nav() {
         <motion.nav
           initial={false}
           animate={isOpen ? "open" : "closed"}
-          className="absolute left-0 z-10 flex min-h-screen w-full justify-center  text-center sm:hidden"
+          className="absolute left-0 z-10 flex w-full justify-center  text-center sm:hidden"
           ref={containerRef}
         >
-          <motion.div variants={sidebar} className="w-full bg-white" />
+          <motion.div
+            variants={sidebar}
+            className="min-h-screen w-full bg-white"
+          />
           <Navigation />
         </motion.nav>
         {/* {mobile menu} */}
