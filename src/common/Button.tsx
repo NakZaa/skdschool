@@ -11,29 +11,29 @@ import { useScrollPosition } from "@/utils/scrollPosition"
 
 export function JoinButton() {
   return (
-    <>
+    <Link href="/contact">
       <motion.div
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         className="landing-btn --primary font-display font-medium"
       >
-        <Link href="/contact">JOIN US</Link>
+        <span>JOIN US</span>
       </motion.div>
-    </>
+    </Link>
   )
 }
 
 export function ActivitiesButton() {
   return (
-    <>
+    <Link href="/activities">
       <motion.div
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         className="landing-btn --primary font-display font-medium"
       >
-        <Link href="/activities">ACTIVITIES</Link>
+        <span>ACTIVITIES</span>
       </motion.div>
-    </>
+    </Link>
   )
 }
 
