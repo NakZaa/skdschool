@@ -1,9 +1,8 @@
 import Image from "next/image"
 
-import { ContactCard } from "@/common/ContactCard"
-import PageContainer from "@/common/PageContainer"
+import { ContactCard } from "@/components/common/ContactCard"
+import PageContainer from "@/components/common/PageContainer"
 import Turtle from "@/images/turtle.png"
-import { Mail } from "@/svg/Mail"
 import { Phone } from "@/svg/Phone"
 import { Pin } from "@/svg/Pin"
 import { FacebookLogo } from "@/svg/Socials"
@@ -17,8 +16,8 @@ export default function Contact() {
     >
       <main className="flex min-h-screen flex-col items-center justify-start pt-24 sm:pt-12">
         <section className="mb-4 px-10 text-center">
-          <p className="text-2xl font-semibold leading-[1] sm:text-4xl">
-            <span className="block text-skd-primary-600">CONTACTS</span>
+          <p className="text-2xl font-bold sm:text-4xl">
+            <span className="text-skd-primary-600 block">CONTACTS</span>
           </p>
         </section>
 

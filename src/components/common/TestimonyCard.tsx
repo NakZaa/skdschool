@@ -1,5 +1,3 @@
-import Image from "next/image"
-
 import { QuoteVector } from "@/svg/Quote"
 
 export const TestimonyCard = (props: {

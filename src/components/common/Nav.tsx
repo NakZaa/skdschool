@@ -4,8 +4,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
-import { Disclosure, Transition } from "@headlessui/react"
-import { Bars2Icon, XMarkIcon } from "@heroicons/react/24/outline"
 import clsx from "clsx"
 import { motion, useCycle } from "framer-motion"
 
@@ -14,6 +12,7 @@ import { useScrollPosition } from "@/utils/scrollPosition"
 
 import { MenuToggle } from "./Button"
 import { Navigation } from "./Navigation"
+import { Button } from "../ui/button"
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -57,7 +56,7 @@ export default function Nav() {
     <header
       className={clsx(
         scrollPosition > 0
-          ? "bg-skd-primary-600 sm:bg-transparent"
+          ? "bg-skd-primary-600/75 sm:bg-transparent"
           : "sm:bg-transparent",
         "fixed left-0 top-0 z-40 w-full px-6 transition-all duration-150 ease-out sm:relative sm:py-4",
       )}
@@ -86,17 +85,18 @@ export default function Nav() {
 
               <div className="hidden items-center space-x-8 md:ml-10 md:flex">
                 {navigation.map((item) => (
-                  <Link
-                    href={item.href}
-                    key={item.name}
-                    className={`text-md font-medium ${
-                      `/${location}` == item.href
-                        ? "text-skd-primary-600 hover:text-skd-primary-300"
-                        : "text-gray-500 hover:text-gray-600 "
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
+                  <Button key={item.name} variant='link'>
+                    <Link
+                      href={item.href}
+                      className={`text-md font-medium ${
+                        `/${location}` == item.href
+                          ? "text-skd-primary-600 hover:text-skd-primary-300"
+                          : "text-gray-500 hover:text-gray-600 "
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
+                  </Button>
                 ))}
               </div>
 

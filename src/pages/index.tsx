@@ -1,19 +1,21 @@
-import { ActivitiesButton, JoinButton } from "@/common/Button"
-import { FeatureCard } from "@/common/FeatureCard"
-import { TestimonyCard } from "@/common/TestimonyCard"
-import Cat from "@/images/cat.png"
-import Candy from "@/images/candy.png"
-import Fish from "@/images/fish.png"
+import Image from "next/image"
+import Link from "next/link"
+
+import { ActivitiesButton, JoinButton } from "@/components/common/Button"
+import { FeatureCard } from "@/components/common/FeatureCard"
+import PageContainer from "@/components/common/PageContainer"
+import { TestimonyCard } from "@/components/common/TestimonyCard"
+import { Video } from "@/components/common/YoutubePlayer"
+import { Button } from "@/components/ui/button"
 import Bee from "@/images/bee.png"
+import Candy from "@/images/candy.png"
+import Cat from "@/images/cat.png"
+import Fish from "@/images/fish.png"
 import Kids from "@/images/kids.png"
-import Trees from "@/images/tree.png"
 import Pencil from "@/images/pencil.png"
 import Stars from "@/images/stars.png"
+import Trees from "@/images/tree.png"
 import Rainbow from "@/images/rainbow.png"
-import PageContainer from "@/common/PageContainer"
-import { Video } from "@/common/YoutubePlayer"
-
-import Image from "next/image"
 
 import landingPic from "/src/images/Default.png"
 
@@ -26,26 +28,32 @@ const IndexPage = () => {
     >
       <main>
         <div className="flex min-h-screen flex-col items-center justify-start pt-24 sm:pt-12">
-          <section className="mb-4 px-10 text-center">
-            <p className="text-2xl font-semibold leading-[1] sm:text-4xl">
-              <span className="block text-skd-primary-600">
+          <section className="px-10 text-center">
+            <div className="text-2xl font-semibold leading-[1] sm:text-4xl">
+              <h1 className=" block">
                 WELCOME TO <br />
-                SIAM KID D SCHOOL
-              </span>
-            </p>
+                <span className="text-skd-primary-600 text-3xl font-bold">
+                  SIAM KID D SCHOOL
+                </span>
+              </h1>
+            </div>
           </section>
 
-          <section className="relative flex w-full justify-center overflow-hidden py-4">
+          <section className="relative flex w-full justify-center overflow-hidden">
             <Image
               src={landingPic}
               alt="Siam Kid D School"
               priority
-              className="z-10 min-w-0 max-w-[80vh]"
+              className="z-10 min-w-0 max-w-[40vh]"
             />
           </section>
 
           <section className="flex items-center justify-center pb-8">
-            <JoinButton />
+            <JoinButton>
+              <Button size="lg" className="w-full gap-2 px-10 py-6 text-2xl" asChild>
+                <Link href="/contact">Join us</Link>
+              </Button>
+            </JoinButton>
           </section>
 
           <section className="w-full bg-white pb-4">
@@ -138,7 +146,11 @@ const IndexPage = () => {
           </section>
 
           <section className="flex items-center justify-center pb-8">
-            <ActivitiesButton />
+            <ActivitiesButton>
+              <Button size="lg" className="w-full gap-2 text-xl px-8 py-6" asChild>
+                <Link href="/activities">Activities</Link>
+              </Button>
+            </ActivitiesButton>
           </section>
 
           <section className="relative flex w-full justify-center overflow-hidden py-3">
@@ -192,12 +204,16 @@ const IndexPage = () => {
 
           <section className="flex w-full flex-col justify-center bg-gray-100 px-16 py-20 text-center">
             <p className="font-semibold leading-tight">
-              <span className="text-2xl text-skd-primary-600 sm:text-4xl">
+              <span className="text-skd-primary-600 text-2xl sm:text-4xl">
                 Interested?
               </span>
             </p>
             <div className="mt-4 flex items-center justify-center">
-              <JoinButton />
+              <JoinButton>
+                <Button size="lg" className="w-full gap-2" asChild>
+                  <Link href="/contact">JOIN US</Link>
+                </Button>
+              </JoinButton>
             </div>
           </section>
         </div>

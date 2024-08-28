@@ -1,8 +1,10 @@
 import Image from "next/image"
+import Link from "next/link"
 
-import { JoinButton } from "@/common/Button"
-import PageContainer from "@/common/PageContainer"
-import { Video } from "@/common/YoutubePlayer"
+import { JoinButton } from "@/components/common/Button"
+import PageContainer from "@/components/common/PageContainer"
+import { Video } from "@/components/common/YoutubePlayer"
+import { Button } from "@/components/ui/button"
 import Boat from "@/images/boat.png"
 import Happy from "@/images/happy.png"
 
@@ -15,8 +17,8 @@ export default function Activities() {
     >
       <main className="flex min-h-screen flex-col items-center justify-start pt-24 sm:pt-12">
         <section className="mb-4 px-10 text-center">
-          <p className="text-2xl font-semibold leading-[1] sm:text-4xl">
-            <span className="block text-skd-primary-600">ACTIVITIES</span>
+          <p className="text-3xl font-bold leading-[1] sm:text-4xl">
+            <span className="text-skd-primary-600 block">ACTIVITIES</span>
           </p>
         </section>
 
@@ -85,12 +87,16 @@ export default function Activities() {
 
         <section className="flex w-full flex-col justify-center bg-gray-100 px-16 py-20 text-center">
           <p className="font-semibold leading-tight">
-            <span className="text-2xl text-skd-primary-600 sm:text-4xl">
+            <span className="text-skd-primary-600 text-2xl sm:text-4xl">
               Interested?
             </span>
           </p>
-          <div className="mt-12">
-            <JoinButton />
+          <div className="mt-4">
+            <JoinButton>
+              <Button size="lg" className="gap-2" asChild>
+                <Link href="/contact">JOIN US</Link>
+              </Button>
+            </JoinButton>
           </div>
         </section>
       </main>

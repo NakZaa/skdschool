@@ -6,8 +6,6 @@ import NextDocument, {
   NextScript,
 } from "next/document"
 
-import { GoogleAnalytics } from "@next/third-parties/google"
-
 export default class Document extends NextDocument {
   static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await NextDocument.getInitialProps(ctx)

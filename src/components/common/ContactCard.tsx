@@ -2,7 +2,7 @@ import { ComponentProps } from "react"
 
 import Link from "next/link"
 
-import { motion } from "framer-motion"
+import { Button } from "../ui/button"
 
 export const ContactCard = ({
   title,
@@ -18,9 +18,9 @@ export const ContactCard = ({
   return (
     <Link href={link} target="_blank" rel="noreferrer">
       <article className="relative rounded-lg bg-white py-6 text-center">
-        <div className="absolute -top-6 left-1/2 inline-block -translate-x-1/2 rounded-full bg-skd-primary-600 p-3 shadow-lg transition-all hover:scale-110 hover:bg-skd-primary-300">
+        <Button className="h-full rounded-full p-4 transition-all hover:scale-110">
           <Icon className="h-10 w-10 text-white" />
-        </div>
+        </Button>
         <div className="flex flex-col items-center justify-center px-12 py-6 text-center">
           <h3 className="mb-4 pt-4 text-xl font-semibold">{title}</h3>
           <p className="whitespace-pre-wrap">{description}</p>

@@ -3,37 +3,38 @@
 import * as React from "react"
 
 import Link from "next/link"
+import { useRouter } from "next/router"
 
 import clsx from "clsx"
 import { SVGMotionProps, motion } from "framer-motion"
 
 import { useScrollPosition } from "@/utils/scrollPosition"
 
-export function JoinButton() {
+export const JoinButton = ({ children }: { children: React.ReactNode }) => {
+  const router = useRouter()
+  const onClick = () => {
+    router.push("/contact")
+  }
   return (
-    <Link href="/contact">
-      <motion.div
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        className="landing-btn --primary font-display font-medium"
-      >
-        <span>JOIN US</span>
-      </motion.div>
-    </Link>
+    <span onClick={onClick} className="cursor-pointer">
+      {children}
+    </span>
   )
 }
 
-export function ActivitiesButton() {
+export const ActivitiesButton = ({
+  children,
+}: {
+  children: React.ReactNode
+}) => {
+  const router = useRouter()
+  const onClick = () => {
+    router.push("/activities")
+  }
   return (
-    <Link href="/activities">
-      <motion.div
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        className="landing-btn --primary font-display font-medium"
-      >
-        <span>ACTIVITIES</span>
-      </motion.div>
-    </Link>
+    <span onClick={onClick} className="cursor-pointer">
+      {children}
+    </span>
   )
 }
 
